@@ -372,6 +372,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.hammerhead.diag.rc.user:root/init.hammerhead.diag.rc
 endif
 
+# OpenGApps
+GAPPS_VARIANT := pico
+
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
+
 # QCOM display HAL
 $(call project-set-path,qcom-display,device/lge/hammerheadcaf/display)
 
