@@ -232,8 +232,8 @@ PRODUCT_PACKAGES += \
     HammerheadDoze
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+# PRODUCT_PACKAGES += \
+#     Gello
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -373,7 +373,14 @@ PRODUCT_COPY_FILES += \
 endif
 
 # OpenGApps
-GAPPS_VARIANT := pico
+GAPPS_VARIANT := nano
+GAPPS_FORCE_PIXEL_LAUNCHER := true
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_FORCE_DIALER_OVERRIDES := true
+GAPPS_FORCE_MMS_OVERRIDES := true
+PRODUCT_PACKAGES += \
+    DMAgent \
+    LatinImeGoogle
 
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)
 
